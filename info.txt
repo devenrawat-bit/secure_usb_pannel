@@ -1,0 +1,56 @@
+#wmi is windows management instrumentations 
+# 1. WMI kya karta hai?
+# Windows ke system hardware/software info ko access karta hai.
+# Hum usse query kar sakte hain: “Koi new USB storage device connected hua kya?”
+
+# 2. Kaise detect karega?
+# Hum WMI ke event listener ko bolenge:
+# "Bhai koi bhi Win32_DeviceChangeEvent ho to bata dena."
+# Fir hum check karenge ki kya woh device USB type hai.
+
+
+🔐 Why OS always knows?
+
+Windows OS ke paas Plug and Play (PnP) system hota hai
+– har new hardware/device auto-detect ho jata hai
+
+Drivers hote hain jo batate hain:
+→ “Yeh kya device hai?”
+→ “Kis port me laga?”
+→ “VID/PID kya hai?”
+→ etc.
+
+Agar device laga, OS usko detect karega hi —
+Aur phir Python ko bhi event mil jaayega.
+
+OS ke permission ke bina koi bhi device system me access nahi le sakta.
+
+Har device ko OS se:
+
+Power supply
+
+Driver support
+
+Mounting access
+lena padta hai.
+
+Agar OS ko pata hi nahi chala, to:
+
+OS driver load nahi karega
+
+Device koi kaam nahi kar sakta
+
+Python ya koi bhi program us device ko detect nahi kar sakta
+
+device manager help in detecting the device which are internal and the external device to make confirm about the true value
+
+✅ What does Status: OK mean in WMI?
+The Status property comes from WMI's Win32_PnPEntity class, and here's what it tells you:
+
+"OK" → The device is functioning properly according to Windows.
+
+"Error" or other statuses → There’s a problem with the device like missing drivers, resource conflicts, etc.
+
+⚠️ But: "OK" only means "Windows recognizes it and the driver is working."
+It does not mean the device is safe or not malicious.
+
