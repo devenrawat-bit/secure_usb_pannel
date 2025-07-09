@@ -8,20 +8,4 @@ time lage to info.txt padna usme basic clear honge jo jo mujhe mila project ke b
 AR: okk
 //hi its me deven rawat
 yo broooo akkkkk
-
-
-
-
-
-
-
-
-
-git status
-git add FILE_NAME
-git commit -m "yoo"
-git push 
-
-
-//to pull the latest code type git pull in the terminal
 wazzzz up buddy 
