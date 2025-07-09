@@ -24,3 +24,4 @@ git push
 
 
 //to pull the latest code type git pull in the terminal
+wazzzz up buddy 
