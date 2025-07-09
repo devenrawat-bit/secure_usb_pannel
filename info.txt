@@ -54,6 +54,8 @@ The Status property comes from WMI's Win32_PnPEntity class, and here's what it t
 ⚠️ But: "OK" only means "Windows recognizes it and the driver is working."
 It does not mean the device is safe or not malicious.
 
+
+
 🔐 ✅ Current Features Implemented (13 Points):
 USB Device Detection
 1---->Detects all devices connected via USB ports (HID, storage, phone, etc.)
