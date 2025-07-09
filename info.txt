@@ -54,3 +54,42 @@ The Status property comes from WMI's Win32_PnPEntity class, and here's what it t
 ⚠️ But: "OK" only means "Windows recognizes it and the driver is working."
 It does not mean the device is safe or not malicious.
 
+🔐 ✅ Current Features Implemented (13 Points):
+USB Device Detection
+Detects all devices connected via USB ports (HID, storage, phone, etc.)
+
+Device Type Identification
+Classifies device type (Mass Storage, HID, MTP/Phone, etc.)
+
+VID/PID Extraction
+Extracts Vendor ID and Product ID for identification and matching
+
+Serial Number, Manufacturer, Product String Check
+Verifies existence and validity of identifying strings
+
+Whitelist Authorization
+Allows only approved (whitelisted) devices to connect fully
+
+Block Unknown/Unverified Devices
+Denies access to devices not on whitelist or with suspicious details
+
+Event Logging
+Logs all USB connect/disconnect events, device info, and access results
+
+Sandboxing (Isolated Environment Scanning)
+Suspicious devices are scanned in an isolated environment
+
+Fake/Missing Identifier Detection
+Flags devices with missing serials, generic names, or fake strings
+
+Behavior Monitoring for HID Devices
+Detects abnormal keystroke patterns (e.g., Rubber Ducky attacks)
+
+Read-Only Mounting for Storage Devices
+Ensures no autorun malware can execute by mounting in read-only mode
+
+USB Device Health Check
+Scans for signs of device errors or corruption (now marked as completed)
+
+AI-Based Threat Detection
+Uses ML to detect patterns like rapid keystrokes or suspicious activity
